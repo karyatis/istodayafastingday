@@ -27,17 +27,14 @@
     .then(response => response.json())
     .then(data => {
    
-      function isItAFastingDay() {
-        let result;
-        if (data.fastElement == "No Fast") {
-            result = 'NO';
-        } else {
-            result = 'YES';
-        }
-        return result;
-        console.log(isItAFastingDay(result));
+      if (data.fastElement == "No Fast") {
+        result = 'NO';
+      } else {
+        result = 'YES';
       }
+    console.log(result);
     });
+
   </script>
 </body>
 </html>
