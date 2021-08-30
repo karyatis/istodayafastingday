@@ -21,8 +21,6 @@
 
     const myRequest = new Request('https://orthocal.info/api/oca/');
 
-    console.log(isItAFastingDay(myRequest));
-
     fetch(myRequest)
     .then(response => response.json())
     .then(data => {
@@ -38,7 +36,7 @@
         }
         return result;
       }
-    }
+    });
 
     console.log(isItAFastingDay(fastElement));
   </script>
