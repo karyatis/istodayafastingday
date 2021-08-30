@@ -26,10 +26,8 @@
     fetch(myRequest)
     .then(response => response.json())
     .then(data => {
-
-      const fastElement = document.getElementById('fast_level_desc');
-
-      function isItAFastingDay(fastElement) {
+   
+      function isItAFastingDay() {
         let result;
         if (data.fastElement == "No Fast") {
             result = 'NO';
@@ -37,8 +35,8 @@
             result = 'YES';
         }
         return result;
+        console.log(isItAFastingDay(result));
       }
-      console.log(isItAFastingDay(fastElement));
     });
   </script>
 </body>
