@@ -27,15 +27,17 @@
 
       const fastElement = document.getElementById('fast_level_desc');
 
+      function isItAFastingDay(fastElement) {
         if (data.fastElement == "No Fast") {
             result = 'NO';
         } else {
             result = 'YES';
         }
-    return result;
+        return result;
+      }
     }
 
-    console.log(fastingOutput(a));
+    console.log(isItAFastingDay(fastElement));
   </script>
 </body>
 </html>
