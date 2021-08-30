@@ -21,7 +21,7 @@
 
     const today = new Date();
 
-    const myRequest = new Request('https://orthocal.info/api/oca/${today.getFullYear()}/${today.getMonth()+1}/${today.getDate()}/');
+    const myRequest = new Request("https://orthocal.info/api/oca/${today.getFullYear()}/${today.getMonth()+1}/${today.getDate()}/");
 
     fetch(myRequest)
     .then(response => response.json())
