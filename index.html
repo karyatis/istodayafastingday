@@ -17,23 +17,28 @@
 
 <body>
   <h2>Is Today A Fasting Day?</h2>
+  <div id="result"></div>
   <script>
 
     const today = new Date();
 
     const myRequest = new Request(`https://orthocal.info/api/oca/${today.getFullYear()}/${today.getMonth()+1}/${today.getDate()}/`);
 
+    let element = document.getElementById("result");
+
     fetch(myRequest)
     .then(response => response.json())
     .then(data => {
       if (data.fast_level_desc == "No Fast") {
         console.log('NO');
+        element.innerHTML = "NO";
       } else {
         console.log('YES');
       }
-    
+      console.log(element);
     });
 
+    
   </script>
 </body>
 </html>
