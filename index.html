@@ -30,12 +30,10 @@
     .then(response => response.json())
     .then(data => {
       if (data.fast_level_desc == "No Fast") {
-        console.log('NO');
         element.innerHTML = "NO";
       } else {
-        console.log('YES');
+        element.innerHTML = "YES";
       }
-      console.log(element);
     });
 
     
