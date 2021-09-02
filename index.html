@@ -16,24 +16,45 @@
 </head>
 
 <body>
+  <h3>Today is</h3>
+  <div id="day_result"></div>
+  <div id="month_result"></div>
+  <div id="year_result"></div>
+
   <h2>Is Today A Fasting Day?</h2>
-  <div id="result"></div>
+  <div id="fast_desc_result"></div>
+  <div id="fast_exception_result"></div>
   <script>
 
     const today = new Date();
 
     const myRequest = new Request(`https://orthocal.info/api/oca/${today.getFullYear()}/${today.getMonth()+1}/${today.getDate()}/`);
 
-    let element = document.getElementById("result");
+
+    let day_element = document.getElementById("day_result");
+    let month_element = document.getElementById("month_result");
+    let year_element = document.getElementById("year_result");
+    let fast_desc_element = document.getElementById("fast_desc_result");
+    let fast_exception_element = document.getElementById("fast_exception_result");
 
     fetch(myRequest)
     .then(response => response.json())
     .then(data => {
+      //show some date info
+      day_element.innerHTML = data.day;
+      month_element.innerHTML = data.month;
+      year_element.innerHTML = data.year;
+      //day_element.innerHTML = ""
+
+      //logic for the main question
       if (data.fast_level_desc == "No Fast") {
-        element.innerHTML = "NO";
+        fast_desc_element.innerHTML = "NO";
       } else {
-        element.innerHTML = "YES";
+        fast_desc_element.innerHTML = "YES";
       }
+
+      //More info about the day's fast
+      fast_exception_element.innerHTML = data.fast_exception_desc;
     });
 
     
