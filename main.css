@@ -11,6 +11,14 @@ h2 {
   font-weight: 600;
 }
 
+h3 {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+  padding-top: 5px; 
+}
+
 #that_is_the_question {
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 40px;
