@@ -19,13 +19,16 @@
 </head>
 
 <body>
-  <div id="date_result"></div>
-
-  <h2>Is Today A Fasting Day?</h2>
-  <div id="fast_desc_result"></div>
-  <div id="fast_exception_result"></div>
   <div id="nav"><a href="https://istodayafastingday.com/index">New</a> | <a href="https://istodayafastingday.com/old">Old</a> | <a href="https://istodayafastingday.com/more">More</a></div>
 
+  <hr>
+
+  <div id="date_result"></div>
+
+  <div id="that_is_the_question">Is Today A <span class="blue">F</span><span class="gold">A</span><span class="blue">S</span><span class="gold">T</span><span class="blue">I</span><span class="gold">N</span><span class="blue">G</span> <span class="gold">D</span><span class="blue">A</span><span class="gold">Y</span>?</div>
+
+  <div id="fast_desc_result"></div>
+  <div id="fast_exception_result"></div>
 
   <script>
 
@@ -51,9 +54,9 @@
 
       //logic for the main question
       if (data.fast_level_desc == "No Fast") {
-        fast_desc_element.innerHTML = "NO.";
+        fast_desc_element.innerHTML = "NO";
       } else {
-        fast_desc_element.innerHTML = "YES.";
+        fast_desc_element.innerHTML = "YES";
       }
 
       //More info about the day's fast

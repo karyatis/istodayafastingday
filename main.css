@@ -11,11 +11,22 @@ h2 {
   font-weight: 600;
 }
 
-#date_result {
+#that_is_the_question {
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 40px;
   text-align: center;
   font-weight: 600;
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
+#date_result {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 35px;
+  text-align: center;
+  font-weight: 600;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 #fast_desc_result {
@@ -23,15 +34,31 @@ h2 {
   font-size: 60px;
   text-align: center;
   font-weight: 900;
-  padding-top: 10px;
-  padding-bottom: 70px;
+  padding-top: 20px;  
+}
+
+#fast_exception_result {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+  padding-top: 20px;
 }
 
 #nav {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 21px;
+  font-size: 18px;
   text-align: center;
   font-weight: 600;
+  padding-top:  10px;
+}
+
+.blue {
+  color: #0560A5;
+}
+
+.gold {
+  color: #CCAA61;
 }
 
 a:link, a:visited {
@@ -44,5 +71,15 @@ a:link, a:visited {
 
 a:hover {
   text-decoration: underline;
+  color: #0560A5;
 }
 
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
